@@ -9,10 +9,11 @@
       <input type="checkbox" id="<%= task.title %>" name="<%= task.title %>">
     <% end %>
     <label for="<%= task.title %>"><%= link_to task.title, task_path(task) %></label>
+    <%= link_to "Delete", task_path(task), method: :delete, data: { confirm: "Are you sure?" } %>
   </div>
 <% end %>
 
 <hr>
 
-<%= link_to 'Add a new task', new_task_path %>
+<%= link_to '+ Add a new task', new_task_path %>
 
